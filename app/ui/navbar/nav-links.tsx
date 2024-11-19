@@ -13,13 +13,13 @@ function NavLinks() {
 
     return (
         <>
-            <div className={`flex md:flex-row justify-between gap-1 flex-col`}>
+            <div className={`flex justify-between gap-1 flex-col  md:flex-row `}>
                 {
                     links.map((link) => {
                         return (
 
                             <Link key={link.name} href={link.href} className={clsx(`hover:underline-offset-1`, { 'underline-offset-1': pathname === link.href })} >
-                                < p className='hidden md:block'> {link.name}</p >
+                                < p className='hidden lg:block'> {link.name}</p >
                             </Link >
 
 

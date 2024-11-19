@@ -1,7 +1,6 @@
 'use client'
 
 import NavLinks from "./nav-links";
-// import Link from 'next/link';
 import NavIcons from "./nav-icons";
 import Logo from '../../ui/logo'
 
