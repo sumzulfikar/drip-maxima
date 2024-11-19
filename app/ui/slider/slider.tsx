@@ -1,16 +1,13 @@
 'use client'
 import { useState } from 'react';
-import slide1 from '../../../../public/images/slider/slide1.jpg';
-import slide2 from '../../../../public/images/slider/slide2.jpg';
-import slide3 from '../../../../public/images/slider/slide3.jpg'
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import Image from 'next/image';
 function Slider() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const data = [slide1, slide2, slide3];
-    const prev = () => { setCurrentSlide(currentSlide === 0 ? 2 : (prevSlide => prevSlide - 1)); }
-    const next = () => { setCurrentSlide(currentSlide === 2 ? 0 : (prevSlide => prevSlide + 1)); }
+    const data = ['/images/slider/slide1.jpg', '/images/slider/slide2.jpg', '/images/slider/slide3.jpg'];
+    const prev = () => { setCurrentSlide(currentSlide === 0 ? 2 : currentSlide - 1); }
+    const next = () => { setCurrentSlide(currentSlide === 2 ? 0 : currentSlide + 1); }
     return (
         <div className=' relative flex  flex-col'>
             <div className=' grid grid-cols-1 '>
